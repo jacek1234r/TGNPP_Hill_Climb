@@ -40,6 +40,7 @@ public class Radio : MonoBehaviour
     {
         PlayNexStation();
         startSongTime = Time.time;
+        radioMute();////////////////////////////////////////
 
     }
     public void radioMute()
@@ -73,12 +74,14 @@ public static class SoundManager
 {
     static public GameObject soundGameObject = new GameObject("Radio");
     static public AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+    static public AudioSource audioSource1 = soundGameObject.AddComponent<AudioSource>();
 
 
     public enum Sound
     {
         ReachCheckpoint,
         Crash,
+        fillTank
     }
     public enum RadioStations
     {
@@ -93,7 +96,7 @@ public static class SoundManager
         if (Radio.obj.radioMuteFlag)
         {
             Radio.obj.radioMuteFlag = false;
-            audioSource.volume = Radio.obj.volume;
+            //audioSource.volume = Radio.obj.volume;
             audioSource.Play();
         }
         else
@@ -134,7 +137,7 @@ public static class SoundManager
     public static void PlaySound(Sound sound)
     {
         //audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(GetAudioClip(sound));
+        audioSource1.PlayOneShot(GetAudioClip(sound));
     }
     private static AudioClip GetAudioClip(Sound sound)
     {

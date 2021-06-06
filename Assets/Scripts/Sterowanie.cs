@@ -19,7 +19,8 @@ public class Sterowanie : MonoBehaviour
     public static Sterowanie obj;
     public bool onPause = true;
     public GameObject menu;
-
+    public AudioSource engine;
+    public float enginePitch;
 
     public void Awake()
     {
@@ -33,6 +34,24 @@ public class Sterowanie : MonoBehaviour
     {
         tank = 3f;
         onPause = false;
+        engine = GetComponent<AudioSource>();
+        engine.pitch = enginePitch;
+    }
+    public void setPause()
+    {
+        if (onPause == false)
+        {
+            onPause = true;
+            Sterowanie.obj.menu.SetActive(true);
+
+        }
+        else
+        {
+            onPause = false;
+            Sterowanie.obj.menu.SetActive(false);
+
+        }
+        //print("esc");
     }
     private void Update()
     {
@@ -40,19 +59,8 @@ public class Sterowanie : MonoBehaviour
         gasImage.fillAmount = tank/3;
         if (Input.GetKeyDown("escape"))
         {
-            if (onPause == false)
-            {
-                onPause = true;
-                Sterowanie.obj.menu.SetActive(true);
-
-            }
-            else
-            {
-                onPause = false;
-                Sterowanie.obj.menu.SetActive(false);
-
-            }
-            //print("esc");
+            setPause();
+            
         }
     }
     // Update is called once per frame
@@ -66,6 +74,8 @@ public class Sterowanie : MonoBehaviour
         BackTire.AddTorque( -movement * speed * Time.fixedDeltaTime );
         Vehicle.AddTorque( movement * speed * Time.fixedDeltaTime );
         tank -= Math.Abs( zuzyciePaliwa * movement * Time.fixedDeltaTime );
+        enginePitch = Math.Abs(movement);
+            engine.pitch = 0.5f + enginePitch;
         }
     }
 }

@@ -9,7 +9,9 @@ public class fillTank : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Sterowanie.obj.tank = Math.Min( Sterowanie.obj.maxTank, Sterowanie.obj.tank + 1.3f );
+        SoundManager.PlaySound(SoundManager.Sound.fillTank);
         Destroy(gameObject);
+
     }
     // Start is called before the first frame update
     void Start()
