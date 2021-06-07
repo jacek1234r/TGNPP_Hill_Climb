@@ -3,23 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class fillTank : MonoBehaviour
+public class FillTank : MonoBehaviour
 {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Sterowanie.obj.tank = Math.Min( Sterowanie.obj.maxTank, Sterowanie.obj.tank + 1.3f );
+        CarControler.obj.tank = Math.Min(CarControler.obj.maxTank, CarControler.obj.tank + 1.3f);
         Destroy(gameObject);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
