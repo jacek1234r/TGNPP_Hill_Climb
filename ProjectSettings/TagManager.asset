@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Radio
   - GM
+  - Ground
+  - checkpoint
+  - Fuel
   layers:
   - Default
   - TransparentFX

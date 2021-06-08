@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Player")) {
             gm.lastCheckPointPos = transform.position;
-            Debug.Log("Checkpoint colision detected");
+            Debug.Log("Checkpoint Saved");
         }
     }
 }
