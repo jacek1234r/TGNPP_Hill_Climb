@@ -9805,7 +9805,7 @@ MonoBehaviour:
   aktualnaStacja: 0
   soundAudioClipArray:
   - sound: 0
-    audioClip: {fileID: 8300000, guid: f8919ec88dfda2749ad816a951d2c449, type: 3}
+    audioClip: {fileID: 8300000, guid: eb72809ca47942e4bb62cfc6a866cd52, type: 3}
   - sound: 1
     audioClip: {fileID: 8300000, guid: a7afcab8bc82e91418285a7d71d8a46a, type: 3}
   - sound: 2
