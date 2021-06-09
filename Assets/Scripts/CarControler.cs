@@ -16,7 +16,7 @@ public class CarControler : MonoBehaviour {
     public float movement;
     public float maxTank = 3f;
     public float tank = 3f;
-    public float fuelConsumption = 0.01f;
+    public float fuelConsumption = 0.1f;
 
     public Image gasImage;
     public static CarControler obj;
