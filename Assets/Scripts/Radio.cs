@@ -8,7 +8,7 @@ public class Radio : MonoBehaviour
 {
     public float volume = 1;
     public static Radio obj;
-    public bool radioMuteFlag = false;
+    public bool radioMuteFlag = true;
     public float startSongTime;
     public SoundManager.RadioStations aktualnaStacja = SoundManager.RadioStations.Stacja1;
 
@@ -31,9 +31,9 @@ public class Radio : MonoBehaviour
 
     public void Awake()
     {
-        if (obj == null)
-        {
+        if (obj == null) {
             obj = this;
+            DontDestroyOnLoad(obj);
         }
     }
     void Start()
@@ -89,7 +89,7 @@ public static class SoundManager
         Stacja2,
         Stacja3,
     }
-    //static int ileStacji = 3; //doto: oblicz na podstawie d³ujgosci RadioArray
+    //static int ileStacji = 3; //doto: oblicz na podstawie dï¿½ujgosci RadioArray
 
     public static void muteRadio()
     {
