@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 160072871}
   - component: {fileID: 160072870}
   m_Layer: 0
-  m_Name: Button
+  m_Name: RadioButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 326636985}
   - component: {fileID: 326636984}
   m_Layer: 5
-  m_Name: Paliwo
+  m_Name: Fuel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3747,7 +3747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -190.5, y: -0.000015258789}
+  m_AnchoredPosition: {x: -1, y: -0.000015258789}
   m_SizeDelta: {x: -0.0002746582, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712028712
@@ -9796,7 +9796,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7ec0e9ed2f61940b9508fb05bb40c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 0
+  soundGameObject: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioSource1: {fileID: 0}
+  volume: 0.2
   radioMuteFlag: 0
   startSongTime: 0
   aktualnaStacja: 0
@@ -9805,11 +9808,13 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: f8919ec88dfda2749ad816a951d2c449, type: 3}
   - sound: 1
     audioClip: {fileID: 8300000, guid: a7afcab8bc82e91418285a7d71d8a46a, type: 3}
+  - sound: 2
+    audioClip: {fileID: 8300000, guid: 6ef9e9574b3112c45a2ed34bd7492670, type: 3}
   RadioArray:
   - sound: 0
     audioClip: {fileID: 8300000, guid: 640f3459b2f65864a85fc8dd391ecbd1, type: 3}
   - sound: 1
-    audioClip: {fileID: 8300000, guid: dcc0342409b75694e9b81a310811eeb5, type: 3}
+    audioClip: {fileID: 8300000, guid: 939e2528127a3184ca3a0ecd8d3ac912, type: 3}
   - sound: 2
     audioClip: {fileID: 8300000, guid: 13706370d5341f84dbed1f3e2225351b, type: 3}
 --- !u!1 &2125720536

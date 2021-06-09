@@ -6,7 +6,12 @@ using UnityEngine.UI;
 
 public class Radio : MonoBehaviour
 {
-    public float volume = 1;
+
+    public GameObject soundGameObject;
+    public AudioSource audioSource;
+    public AudioSource audioSource1;
+
+    public float volume = 0.7f;
     public static Radio obj;
     public bool radioMuteFlag = true;
     public float startSongTime;
@@ -38,9 +43,13 @@ public class Radio : MonoBehaviour
     }
     void Start()
     {
+        soundGameObject = new GameObject("Radio");
+        audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource1 = soundGameObject.AddComponent<AudioSource>();
+        //setVolume(0.5f);
         PlayNexStation();
         startSongTime = Time.time;
-        radioMute();////////////////////////////////////////
+        //radioMute();////////////////////////////////////////
 
     }
     public void radioMute()
@@ -72,10 +81,7 @@ public class Radio : MonoBehaviour
 
 public static class SoundManager
 {
-    static public GameObject soundGameObject = new GameObject("Radio");
-    static public AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-    static public AudioSource audioSource1 = soundGameObject.AddComponent<AudioSource>();
-
+   
 
     public enum Sound
     {
@@ -96,48 +102,48 @@ public static class SoundManager
         if (Radio.obj.radioMuteFlag)
         {
             Radio.obj.radioMuteFlag = false;
-            //audioSource.volume = Radio.obj.volume;
-            audioSource.Play();
+            Radio.obj.audioSource.volume = Radio.obj.volume;
+            Radio.obj.audioSource.Play();
         }
         else
         {
             Radio.obj.radioMuteFlag = true;
-            audioSource.Pause();
+            Radio.obj.audioSource.Pause();
         }
     }
 
     public static void NextStation(float volume = -1)
     {
-        audioSource.clip = GetRadioStation();
-        float size = audioSource.clip.length;
+        Radio.obj.audioSource.clip = GetRadioStation();
+        float size = Radio.obj.audioSource.clip.length;
         //Debug.Log(size);
 
         if (volume == -1)
         {
-            audioSource.volume = Radio.obj.volume;
+            Radio.obj.audioSource.volume = Radio.obj.volume;
 
         }
         else
         {
-            audioSource.volume = volume;
+            Radio.obj.audioSource.volume = volume;
         }
-        audioSource.time = Random.Range(4f, size - 5f);
-        audioSource.loop = true;
-        audioSource.Play();
+        Radio.obj.audioSource.time = Random.Range(4f, size - 5f);
+        Radio.obj.audioSource.loop = true;
+        Radio.obj.audioSource.Play();
     }
     public static float restart( float lastClick, float newVol )
     {
         //float newTime = audioSource.time;
-        audioSource.volume = newVol;
-        audioSource.time = audioSource.time;// + lastClick;
-        audioSource.Play();
-        return audioSource.time;
+        Radio.obj.audioSource.volume = newVol;
+        Radio.obj.audioSource.time = Radio.obj.audioSource.time;// + lastClick;
+        Radio.obj.audioSource.Play();
+        return Radio.obj.audioSource.time;
     }
 
     public static void PlaySound(Sound sound)
     {
         //audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource1.PlayOneShot(GetAudioClip(sound));
+        Radio.obj.audioSource1.PlayOneShot(GetAudioClip(sound));
     }
     private static AudioClip GetAudioClip(Sound sound)
     {
