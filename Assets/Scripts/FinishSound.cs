@@ -12,8 +12,8 @@ public class FinishSound : MonoBehaviour
         {
             reach = true;
             SoundManager.PlaySound(SoundManager.Sound.ReachCheckpoint);
-            Sterowanie.obj.engine.pitch = 0.3f;
-            Sterowanie.obj.setPause();
+            CarControler.obj.engine.pitch = 0.3f;
+            CarControler.obj.setPause();
         }
     }
 }

@@ -46,11 +46,11 @@ public class CarControler : MonoBehaviour {
     public void setPause() {
         if (onPause == false) {
             onPause = true;
-            Sterowanie.obj.menu.SetActive(true);
+            CarControler.obj.menu.SetActive(true);
 
         } else {
             onPause = false;
-            Sterowanie.obj.menu.SetActive(false);
+            CarControler.obj.menu.SetActive(false);
         }
     }
 

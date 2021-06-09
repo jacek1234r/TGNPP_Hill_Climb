@@ -11,6 +11,5 @@ public class FillTank : MonoBehaviour
         CarControler.obj.tank = Math.Min(CarControler.obj.maxTank, CarControler.obj.tank + 1.3f );
         SoundManager.PlaySound(SoundManager.Sound.fillTank);
         Destroy(gameObject);
-
     }
 }

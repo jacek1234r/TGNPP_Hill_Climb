@@ -5597,7 +5597,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6134,6 +6134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157789613}
   - component: {fileID: 1157789612}
+  - component: {fileID: 1157789611}
   - component: {fileID: 1157789610}
   m_Layer: 0
   m_Name: fuel1
@@ -6158,6 +6159,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.5600002
+--- !u!114 &1157789611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157789609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d4f91b58a72f4449f6ebf902ebccc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1157789612
 SpriteRenderer:
   m_ObjectHideFlags: 0
