@@ -5,11 +5,9 @@ using UnityEngine;
 public class FinishSound : MonoBehaviour
 {
     bool reach = false;
-    // Start is called before the first frame update
-    private void OnTriggerEnter2D( Collider2D collision )
-    {
-        if (!reach)
-        {
+
+    private void OnTriggerEnter2D( Collider2D collision ) {
+        if (!reach) {
             reach = true;
             SoundManager.PlaySound(SoundManager.Sound.ReachCheckpoint);
             CarControler.obj.engine.pitch = 0.3f;
