@@ -36,19 +36,24 @@ public class Radio : MonoBehaviour
 
     public void Awake()
     {
-        if (obj == null) {
-            obj = this;
-            DontDestroyOnLoad(obj);
-        }
-    }
-    void Start()
-    {
+        
         soundGameObject = new GameObject("Radio");
         audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource1 = soundGameObject.AddComponent<AudioSource>();
-        //setVolume(0.5f);
-        PlayNexStation();
-        startSongTime = Time.time;
+        DontDestroyOnLoad(audioSource);
+        DontDestroyOnLoad(audioSource1);
+        if (obj == null)
+        {
+            obj = this;
+            DontDestroyOnLoad(obj);
+            PlayNexStation();
+            startSongTime = Time.time;
+        }
+
+    }
+    public void Start()
+    {
+        
         //radioMute();////////////////////////////////////////
 
     }

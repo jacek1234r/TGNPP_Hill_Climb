@@ -12,9 +12,9 @@ public class FillTank : MonoBehaviour
         {
 
             reached = true;
+            this.GetComponent<Renderer>().enabled = false;
             CarControler.obj.tank = Math.Min(CarControler.obj.maxTank, CarControler.obj.tank + 1.3f );
             //Destroy(this.gameObject);
-            this.GetComponent<Renderer>().enabled = false;
             SoundManager.PlaySound(SoundManager.Sound.fillTank);
         }
     }
