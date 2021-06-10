@@ -9,7 +9,7 @@ public class FillTank : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (!reached) {
             reached = true;
-            this.GetComponent<Renderer>().enabled = false;
+            Destroy(this);
             CarControler.obj.tank = Math.Min(CarControler.obj.maxTank, CarControler.obj.tank + 1.3f );
             SoundManager.PlaySound(SoundManager.Sound.fillTank);
         }

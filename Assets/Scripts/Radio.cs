@@ -7,12 +7,14 @@ public class Radio : MonoBehaviour
 {
 
     public GameObject soundGameObject;
+    
     public AudioSource audioSource;
     public AudioSource audioSource1;
 
     public float volume = 0.7f;
     public static Radio obj;
     public bool radioMuteFlag = true;
+    public bool elseMuteFlag = false;
     public float startSongTime;
     public SoundManager.RadioStations aktualnaStacja = SoundManager.RadioStations.Stacja1;
 
@@ -57,6 +59,20 @@ public class Radio : MonoBehaviour
 
     public void radioMute() {
         SoundManager.muteRadio();
+    }
+    public void ElseMute()
+    {
+        if (elseMuteFlag)
+        {
+            CarControler.obj.engine.pitch = 0.5f;
+            elseMuteFlag = false;
+        }
+        else
+        {
+            elseMuteFlag = true;
+            CarControler.obj.engine.pitch = 0f;
+        }
+
     }
 
     public void setVolume(float vol) {
@@ -127,6 +143,7 @@ public static class SoundManager {
 
     public static void PlaySound(Sound sound) {
         //audioSource = soundGameObject.AddComponent<AudioSource>();
+        if (!Radio.obj.elseMuteFlag)
         Radio.obj.audioSource1.PlayOneShot(GetAudioClip(sound));
     }
 

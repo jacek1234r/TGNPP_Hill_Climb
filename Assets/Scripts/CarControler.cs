@@ -11,7 +11,7 @@ public class CarControler : MonoBehaviour {
     public Rigidbody2D Vehicle;
 
     public float speed;
-    public float vehicleSpeed;
+    public float vehicleSpeed = 0;
     private Vector3 oldPos;
     public float movement;
     public float maxTank = 3f;
@@ -25,12 +25,13 @@ public class CarControler : MonoBehaviour {
     public float actuallTorque;
 
     public AudioSource engine;
-    public float enginePitch;
+    public float enginePitch = 0.2f;
 
     public void Awake() {
         if(obj==null) {
             obj = this;
         }
+        engine = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class CarControler : MonoBehaviour {
         onPause = false;
         actuallTorque = 0f;
 
-        engine = GetComponent<AudioSource>();
+        
         engine.pitch = enginePitch;
     }
 
@@ -75,8 +76,13 @@ public class CarControler : MonoBehaviour {
             Vehicle.AddTorque( actuallTorque );
 
             tank -= Math.Abs( fuelConsumption * movement * Time.fixedDeltaTime );
-            enginePitch = Math.Abs(movement);
+            
+        }
+        enginePitch = Math.Abs(vehicleSpeed)/10;
+        if (!Radio.obj.elseMuteFlag)
+        {
             engine.pitch = 0.5f + enginePitch;
+
         }
     }
 }
