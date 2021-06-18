@@ -1674,7 +1674,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -46.331047, y: 2.9611406, z: 0}
+    - position: {x: -73.6176, y: 3.1397276, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -1684,27 +1684,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -49.623695, y: 6.388174, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
-      height: 1
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: -29.733456, y: -4.363303, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
-      height: 1
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: -35.67749, y: 2.7391605, z: 0}
+    - position: {x: -68.32386, y: 3.0557938, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2226,8 +2206,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 5431520cc6b15ad44b55fe8e17405cef, type: 3}
   - {fileID: 21300000, guid: 5431520cc6b15ad44b55fe8e17405cef, type: 3}
   m_LocalAABB:
-    m_Center: {x: 931.89075, y: -20.694176, z: -0.00049999997}
-    m_Extent: {x: 1050.3022, y: 66.80063, z: 0.00049999997}
+    m_Center: {x: 931.89075, y: -20.694176, z: -0.0004}
+    m_Extent: {x: 1050.3022, y: 66.80063, z: 0.0004}
 --- !u!4 &430958918
 Transform:
   m_ObjectHideFlags: 0
@@ -2259,14 +2239,10 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -117.38949, y: -87.16923}
-  - {x: -118.41147, y: 3.0204256}
-  - {x: -46.518803, y: 3.0410867}
-  - {x: -49.68138, y: 6.3327456}
-  - {x: -49.585655, y: 6.4585514}
-  - {x: -30.062923, y: -4.0942736}
-  - {x: -35.738846, y: 2.6878176}
-  - {x: -35.67782, y: 2.81916}
-  - {x: -28.35233, y: 2.8492355}
+  - {x: -118.41147, y: 3.0200872}
+  - {x: -73.61633, y: 3.2197175}
+  - {x: -68.32329, y: 3.1357918}
+  - {x: -28.351429, y: 2.8492346}
   - {x: -25.133568, y: 3.81629}
   - {x: -22.980799, y: 4.4732485}
   - {x: -21.524488, y: 4.925782}
@@ -5208,7 +5184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b3668e12cd1b341b836fcd088d2622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndMenu: {fileID: 0}
+  MenuMenu: {fileID: 2119315574}
+  MenuMenu1: {fileID: 507989428}
+  EndMenu: {fileID: 659504443}
 --- !u!60 &957677630
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5779,7 +5757,6 @@ GameObject:
   - component: {fileID: 1021304637}
   - component: {fileID: 1021304638}
   - component: {fileID: 1021304639}
-  - component: {fileID: 1021304640}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -6022,19 +5999,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1021304640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021304631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17b3668e12cd1b341b836fcd088d2622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EndMenu: {fileID: 659504443}
 --- !u!1 &1031057531
 GameObject:
   m_ObjectHideFlags: 0
