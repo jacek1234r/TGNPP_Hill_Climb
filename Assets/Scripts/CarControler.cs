@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityStandardAssets.CrossPlatformInput;
 
 
 public class CarControler : MonoBehaviour {
@@ -56,7 +57,9 @@ public class CarControler : MonoBehaviour {
     }
 
     private void Update() {
-        movement = Input.GetAxis("Horizontal");
+        //movement = Input.GetAxis("Horizontal");
+        movement = CrossPlatformInputManager.GetAxis("Horizontal");
+        
         gasImage.fillAmount = tank/3;
 
         if (Input.GetKeyDown("escape")) {
