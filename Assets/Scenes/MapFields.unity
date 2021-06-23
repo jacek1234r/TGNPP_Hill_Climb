@@ -7184,9 +7184,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1134341251}
+      - m_Target: {fileID: 2119315579}
         m_TargetAssemblyTypeName: Radio, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: putVolumeToSlider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7195,7 +7195,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &1247486548
 MonoBehaviour:
   m_ObjectHideFlags: 0

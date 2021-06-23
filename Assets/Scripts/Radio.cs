@@ -97,7 +97,7 @@ public class Radio : MonoBehaviour
     }
     public void putVolumeToSlider()
     {
-        slider.value = volume;
+        slider.value = audioSource.volume;
     }
     public void updateVolume2()
     {
