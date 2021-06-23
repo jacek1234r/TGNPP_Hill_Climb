@@ -10,6 +10,7 @@ public class HitDetector : MonoBehaviour {
     public GameObject EndMenu;
     public static HitDetector obj;
     public GameObject countDownTimerText;
+    public GameObject AdsManager;
 
     int countDownStartValue = 4;
 
@@ -48,9 +49,8 @@ public class HitDetector : MonoBehaviour {
             CarControler.obj.onPause = true;
             //TODO: czas na restart
             //AdsManager Ad = new AdsManager();
-            //Ad.ShowInterstitialAd();
+            AdsManager.GetComponent<AdsManager>().ShowInterstitialAd();
             SoundManager.PlaySound(SoundManager.Sound.Crash);
-            //StartCoroutine( waiter() );
             countDownTimer();
 
         }

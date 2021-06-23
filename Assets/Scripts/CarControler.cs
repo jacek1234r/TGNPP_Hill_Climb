@@ -65,7 +65,8 @@ public class CarControler : MonoBehaviour {
     private void Update() {
         //movement = Input.GetAxis("Horizontal");
         movement = CrossPlatformInputManager.GetAxis("Horizontal");
-        
+        movement += Input.GetAxis("Horizontal");
+
         gasImage.fillAmount = tank/3;
 
         if (Input.GetKeyDown("escape")) {
