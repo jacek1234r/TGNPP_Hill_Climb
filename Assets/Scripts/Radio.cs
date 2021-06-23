@@ -7,11 +7,12 @@ public class Radio : MonoBehaviour
 {
 
     public GameObject soundGameObject;
-    
+    public Slider slider;
     public AudioSource audioSource;
     public AudioSource audioSource1;
 
     public float volume = 0.7f;
+    public float volume_2 = 0.7f;
     public static Radio obj;
     public bool radioMuteFlag = true;
     public bool elseMuteFlag = false;
@@ -37,7 +38,8 @@ public class Radio : MonoBehaviour
     {
         
         soundGameObject = new GameObject("Radio");
-        audioSource = soundGameObject.AddComponent<AudioSource>();
+        //audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource = dontDestroyOn.instance.AS;
         audioSource1 = soundGameObject.AddComponent<AudioSource>();
         DontDestroyOnLoad(audioSource);
         DontDestroyOnLoad(audioSource1);
@@ -46,7 +48,7 @@ public class Radio : MonoBehaviour
 
             obj = this;
             DontDestroyOnLoad(obj);
-            PlayNexStation();
+            //PlayNexStation();
             startSongTime = Time.time;
         }
 
@@ -89,8 +91,18 @@ public class Radio : MonoBehaviour
         //Radio.StartPlaying();
         //if (this.radioMuteFlag == false) {
             SoundManager.NextStation( volume );
+            volume_2 = volume;
             startSongTime = Time.time;
         //}
+    }
+    public void putVolumeToSlider()
+    {
+        slider.value = volume;
+    }
+    public void updateVolume2()
+    {
+        volume_2 = volume;
+        slider.value = volume_2;
     }
 }
 
@@ -121,12 +133,14 @@ public static class SoundManager {
     }
 
     public static void NextStation(float volume = -1) {
+        SoundManager.RadioStations temp = Radio.obj.aktualnaStacja;
         AudioClip newStation = GetRadioStation();
         if(newStation == Radio.obj.RadioArray[0].audioClip && !Radio.obj.radioMuteFlag)
         //if (false)
         {
             Debug.Log("mute");
             muteRadio(false);
+            Radio.obj.aktualnaStacja = temp;
 
         }
         else
@@ -200,5 +214,6 @@ public static class SoundManager {
     public static void RadioPlay() {
         SoundManager.NextStation();
     }
+    
 }
 //SoundManager.PlaySound(SoundManager.Sound.Crash);

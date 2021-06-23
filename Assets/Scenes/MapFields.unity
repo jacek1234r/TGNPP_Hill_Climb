@@ -3360,6 +3360,30 @@ MonoBehaviour:
           m_StringArgument: Garage
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2119315574}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2119315579}
+        m_TargetAssemblyTypeName: Radio, Assembly-CSharp
+        m_MethodName: updateVolume2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &506565844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7160,6 +7184,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1134341251}
+        m_TargetAssemblyTypeName: Radio, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &1247486548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11026,15 +11062,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119315574}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad7ec0e9ed2f61940b9508fb05bb40c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundGameObject: {fileID: 0}
+  slider: {fileID: 1092829375}
   audioSource: {fileID: 0}
   audioSource1: {fileID: 0}
   volume: 0.2
+  volume_2: 0.7
   radioMuteFlag: 0
   elseMuteFlag: 0
   startSongTime: 0
