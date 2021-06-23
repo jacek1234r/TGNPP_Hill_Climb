@@ -726,7 +726,7 @@ PlayerSettings:
     Game Performance: 0
     Purchasing: 0
     UDP: 0
-    Unity Ads: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -740,11 +740,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 2e27f2ed-eb21-4841-8972-0759affb4ae6
+  cloudProjectId: a7ab68d6-638b-4c82-9441-059ddf529601
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: TGNPP_Hill_Climb
-  organizationId: jacek1234r
+  projectName: PostApo
+  organizationId: unity_yaoqjs4yemoi9a
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
