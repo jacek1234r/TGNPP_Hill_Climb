@@ -2306,8 +2306,8 @@ SpriteShapeRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4bcb612a26896f744bb457678faaf599, type: 2}
-  - {fileID: 2100000, guid: 4bcb612a26896f744bb457678faaf599, type: 2}
+  - {fileID: 2100000, guid: c6a54da0f4bddcf4c8e1df55dc97aaec, type: 2}
+  - {fileID: 2100000, guid: 73eaa81d4725f1246a39a94251eac934, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5349,6 +5349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4f91b58a72f4449f6ebf902ebccc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self: {fileID: 953395182}
 --- !u!212 &953395185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6230,6 +6231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4f91b58a72f4449f6ebf902ebccc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self: {fileID: 0}
 --- !u!82 &1021304639
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6818,6 +6820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4f91b58a72f4449f6ebf902ebccc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self: {fileID: 1157789609}
 --- !u!212 &1157789612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9349,6 +9352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4f91b58a72f4449f6ebf902ebccc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self: {fileID: 1821857176}
 --- !u!212 &1821857179
 SpriteRenderer:
   m_ObjectHideFlags: 0

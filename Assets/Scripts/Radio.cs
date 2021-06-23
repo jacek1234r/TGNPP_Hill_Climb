@@ -58,7 +58,7 @@ public class Radio : MonoBehaviour
     }
 
     public void radioMute() {
-        SoundManager.muteRadio();
+        SoundManager.muteRadio(Radio.obj.radioMuteFlag);
     }
     public void ElseMute()
     {
@@ -70,7 +70,9 @@ public class Radio : MonoBehaviour
         else
         {
             elseMuteFlag = true;
+
             CarControler.obj.engine.pitch = 0f;
+            CarControler.obj.enginePitch = 0f;
         }
 
     }
@@ -85,10 +87,10 @@ public class Radio : MonoBehaviour
 
     public void PlayNexStation() {
         //Radio.StartPlaying();
-        if (this.radioMuteFlag == false) {
+        //if (this.radioMuteFlag == false) {
             SoundManager.NextStation( volume );
             startSongTime = Time.time;
-        }
+        //}
     }
 }
 
@@ -107,8 +109,8 @@ public static class SoundManager {
     }
     //static int ileStacji = 3; //doto: oblicz na podstawie d�ujgosci RadioArray
 
-    public static void muteRadio() {
-        if (Radio.obj.radioMuteFlag) {
+    public static void muteRadio( bool boolArg ) {
+        if (boolArg) {
             Radio.obj.radioMuteFlag = false;
             Radio.obj.audioSource.volume = Radio.obj.volume;
             Radio.obj.audioSource.Play();
@@ -119,18 +121,37 @@ public static class SoundManager {
     }
 
     public static void NextStation(float volume = -1) {
-        Radio.obj.audioSource.clip = GetRadioStation();
-        float size = Radio.obj.audioSource.clip.length;
-        //Debug.Log(size);
+        AudioClip newStation = GetRadioStation();
+        if(newStation == Radio.obj.RadioArray[0].audioClip && !Radio.obj.radioMuteFlag)
+        //if (false)
+        {
+            Debug.Log("mute");
+            muteRadio(false);
 
-        if (volume == -1) {
-            Radio.obj.audioSource.volume = Radio.obj.volume;
-        } else {
-            Radio.obj.audioSource.volume = volume;
         }
-        Radio.obj.audioSource.time = Random.Range(4f, size - 5f);
-        Radio.obj.audioSource.loop = true;
-        Radio.obj.audioSource.Play();
+        else
+        {
+            Debug.Log("unmute");
+            muteRadio(true);
+            Radio.obj.radioMuteFlag = false;
+            Radio.obj.audioSource.volume = Radio.obj.volume;
+            Radio.obj.audioSource.clip = newStation;
+            float size = Radio.obj.audioSource.clip.length;
+            //Debug.Log(size);
+
+            if (volume == -1)
+            {
+                Radio.obj.audioSource.volume = Radio.obj.volume;
+            }
+            else
+            {
+                Radio.obj.audioSource.volume = volume;
+            }
+            Radio.obj.audioSource.time = Random.Range(4f, size - 5f);
+            Radio.obj.audioSource.loop = true;
+            Radio.obj.audioSource.Play();
+        }
+        
     }
 
     public static float restart( float lastClick, float newVol ) {

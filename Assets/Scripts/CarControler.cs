@@ -31,8 +31,11 @@ public class CarControler : MonoBehaviour {
     public void Awake() {
         if(obj==null) {
             obj = this;
+
         }
+        Time.timeScale = 0;
         engine = GetComponent<AudioSource>();
+        engine.pitch = 0f;
     }
 
     // Start is called before the first frame update
@@ -40,18 +43,21 @@ public class CarControler : MonoBehaviour {
         tank = 3f;
         onPause = false;
         actuallTorque = 0f;
+        Time.timeScale = 1;
 
-        
-        engine.pitch = enginePitch;
+        if (!Radio.obj.elseMuteFlag)
+            engine.pitch = enginePitch;
     }
 
     public void setPause() {
         if (onPause == false) {
             onPause = true;
+            Time.timeScale = 0;
             CarControler.obj.menu.SetActive(true);
 
         } else {
             onPause = false;
+            Time.timeScale = 1;
             CarControler.obj.menu.SetActive(false);
         }
     }
