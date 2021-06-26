@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Radio : MonoBehaviour
-{
+public class Radio : MonoBehaviour {
 
     public GameObject soundGameObject;
     public Slider slider;
@@ -34,49 +33,36 @@ public class Radio : MonoBehaviour
         public AudioClip audioClip;
     }
 
-    public void Awake()
-    {
-        
+    public void Awake() {
         soundGameObject = new GameObject("Radio");
         //audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource = dontDestroyOn.instance.AS;
         audioSource1 = soundGameObject.AddComponent<AudioSource>();
         DontDestroyOnLoad(audioSource);
         DontDestroyOnLoad(audioSource1);
-        if (obj == null)
-        {
 
+        if (obj == null) {
             obj = this;
             DontDestroyOnLoad(obj);
             //PlayNexStation();
             startSongTime = Time.time;
         }
-
-    }
-    public void Start()
-    {
-        
-        //radioMute();////////////////////////////////////////
     }
 
     public void radioMute() {
         SoundManager.muteRadio(Radio.obj.radioMuteFlag);
     }
-    public void ElseMute()
-    {
-        if (elseMuteFlag)
-        {
+
+    public void ElseMute() {
+        if (elseMuteFlag) {
             CarControler.obj.engine.pitch = 0.5f;
             elseMuteFlag = false;
-        }
-        else
-        {
+        } else {
             elseMuteFlag = true;
 
             CarControler.obj.engine.pitch = 0f;
             CarControler.obj.enginePitch = 0f;
         }
-
     }
 
     public void setVolume(float vol) {
@@ -95,16 +81,17 @@ public class Radio : MonoBehaviour
             startSongTime = Time.time;
         //}
     }
-    public void putVolumeToSlider()
-    {
+
+    public void putVolumeToSlider() {
         slider.value = audioSource.volume;
     }
-    public void updateVolume2()
-    {
+
+    public void updateVolume2() {
         volume_2 = volume;
         slider.value = volume_2;
     }
 }
+
 
 public static class SoundManager {
 
@@ -135,32 +122,27 @@ public static class SoundManager {
     public static void NextStation(float volume = -1) {
         SoundManager.RadioStations temp = Radio.obj.aktualnaStacja;
         AudioClip newStation = GetRadioStation();
-        if(newStation == Radio.obj.RadioArray[0].audioClip && !Radio.obj.radioMuteFlag)
-        //if (false)
-        {
+        if (newStation == Radio.obj.RadioArray[0].audioClip && !Radio.obj.radioMuteFlag) {
+        //if (false){
             Debug.Log("mute");
             muteRadio(false);
             Radio.obj.aktualnaStacja = temp;
 
-        }
-        else
-        {
+        } else {
             Debug.Log("unmute");
             muteRadio(true);
             Radio.obj.radioMuteFlag = false;
             Radio.obj.audioSource.volume = Radio.obj.volume;
             Radio.obj.audioSource.clip = newStation;
             float size = Radio.obj.audioSource.clip.length;
-            //Debug.Log(size);
+            Debug.Log("Radio size:"+size);
 
-            if (volume == -1)
-            {
+            if (volume == -1) {
                 Radio.obj.audioSource.volume = Radio.obj.volume;
-            }
-            else
-            {
+            } else {
                 Radio.obj.audioSource.volume = volume;
             }
+
             Radio.obj.audioSource.time = Random.Range(4f, size - 5f);
             Radio.obj.audioSource.loop = true;
             Radio.obj.audioSource.Play();
@@ -178,8 +160,9 @@ public static class SoundManager {
 
     public static void PlaySound(Sound sound) {
         //audioSource = soundGameObject.AddComponent<AudioSource>();
-        if (!Radio.obj.elseMuteFlag)
-        Radio.obj.audioSource1.PlayOneShot(GetAudioClip(sound));
+        if (!Radio.obj.elseMuteFlag) {
+            Radio.obj.audioSource1.PlayOneShot(GetAudioClip(sound));
+        }     
     }
 
     private static AudioClip GetAudioClip(Sound sound) {
@@ -214,6 +197,6 @@ public static class SoundManager {
     public static void RadioPlay() {
         SoundManager.NextStation();
     }
-    
 }
+
 //SoundManager.PlaySound(SoundManager.Sound.Crash);
