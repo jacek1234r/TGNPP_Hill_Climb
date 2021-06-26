@@ -105,6 +105,7 @@ public static class SoundManager {
         Stacja1,
         Stacja2,
         Stacja3,
+        Stacja4,
     }
     //static int ileStacji = 3; //doto: oblicz na podstawie d�ujgosci RadioArray
 
