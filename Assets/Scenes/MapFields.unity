@@ -11086,11 +11086,13 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 6ef9e9574b3112c45a2ed34bd7492670, type: 3}
   RadioArray:
   - sound: 0
-    audioClip: {fileID: 8300000, guid: 640f3459b2f65864a85fc8dd391ecbd1, type: 3}
+    audioClip: {fileID: 8300000, guid: 01317eb442a71c8428e18d05077286c3, type: 3}
   - sound: 1
-    audioClip: {fileID: 8300000, guid: 939e2528127a3184ca3a0ecd8d3ac912, type: 3}
+    audioClip: {fileID: 8300000, guid: e247c06401cac724d86f80b155bc5ccf, type: 3}
   - sound: 2
-    audioClip: {fileID: 8300000, guid: 13706370d5341f84dbed1f3e2225351b, type: 3}
+    audioClip: {fileID: 8300000, guid: 3e95ebf7d47251749bc0b5c6e01ba3e6, type: 3}
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: 9f16c0fd5cd78024e9c137cd81e11088, type: 3}
 --- !u!1 &2125720536
 GameObject:
   m_ObjectHideFlags: 0
