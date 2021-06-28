@@ -986,10 +986,10 @@ RectTransform:
   m_Father: {fileID: 1376541998}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -729, y: 372}
-  m_SizeDelta: {x: 260.7947, y: 172.4554}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 231, y: -168}
+  m_SizeDelta: {x: 260, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160072870
 MonoBehaviour:
@@ -1201,9 +1201,9 @@ RectTransform:
   m_Father: {fileID: 1376541998}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -760.55853, y: -340.55853}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 199.44147, y: 199.44147}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177750849
@@ -1709,10 +1709,10 @@ RectTransform:
   m_Father: {fileID: 1376541998}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 757, y: 343.04}
-  m_SizeDelta: {x: 230.38, y: 230.3827}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -203, y: -196.95999}
+  m_SizeDelta: {x: 230.38, y: 230.38269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326636984
 MonoBehaviour:
@@ -4236,8 +4236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -0.000015258789}
-  m_SizeDelta: {x: -0.0002746582, y: 0}
+  m_AnchoredPosition: {x: -0.00016784668, y: 0}
+  m_SizeDelta: {x: -0.0003, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712028712
 MonoBehaviour:
@@ -5855,8 +5855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -21.067}
+  m_SizeDelta: {x: 91.2919, y: 42.1347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985065838
 MonoBehaviour:
@@ -5905,8 +5905,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5992,8 +5992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 426.4533, y: 351.5124}
+  m_AnchoredPosition: {x: 0, y: -45.646023}
+  m_SizeDelta: {x: 426.4533, y: 442.8044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1010784307
 GameObject:
@@ -7434,8 +7434,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.1, y: -151.3}
-  m_SizeDelta: {x: 111.6804, y: 39.3822}
+  m_AnchoredPosition: {x: 3.0999985, y: -153.93344}
+  m_SizeDelta: {x: 232.8178, y: 44.649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351599545
 MonoBehaviour:
@@ -8529,9 +8529,9 @@ RectTransform:
   m_Father: {fileID: 1376541998}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 496, y: 394.23}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -464, y: -145.76999}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504380112
@@ -10077,9 +10077,9 @@ RectTransform:
   m_Father: {fileID: 1376541998}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 760, y: -340}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -200, y: 200}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914944040
@@ -11003,7 +11003,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
