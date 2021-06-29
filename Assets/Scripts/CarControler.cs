@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityStandardAssets.CrossPlatformInput;
-
+using UnityEngine.SceneManagement;
 
 public class CarControler : MonoBehaviour {
     public Rigidbody2D FrontTire;
@@ -71,6 +71,15 @@ public class CarControler : MonoBehaviour {
 
         if (Input.GetKeyDown("escape")) {
             setPause();   
+        }
+
+        if(tank <= 0f) {
+            Debug.Log("Out of Gas!");
+
+            CarControler.obj.onPause = true;
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
     }
 
